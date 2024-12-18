@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "c85fa322-7c3b-43b7-b91c-dae5dfaf9831",
+		"name": "orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40511917"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/createorupdateorder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "role",
+						"value": "PUBLISHER",
+						"type": "text"
+					},
+					{
+						"key": "username",
+						"value": "userX",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n  \"taskId\": \"replace pump\",\r\n  \"partsPrice\": 150,\r\n  \"labourPrice\": 50,\r\n  \"amount\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/createorupdateorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createorupdateorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/createorupdateorder Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "role",
+						"value": "REVIEWER",
+						"type": "text"
+					},
+					{
+						"key": "username",
+						"value": "userX",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n  \"taskId\": \"replace pump\",\r\n  \"partsPrice\": 150,\r\n  \"labourPrice\": 50,\r\n  \"amount\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/createorupdateorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createorupdateorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createorupdateorder Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "role",
+						"value": "REVIEWER",
+						"type": "text"
+					},
+					{
+						"key": "username",
+						"value": "userR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"recordId\": \"1\",\r\n  \"action\": \"reject\",\r\n  \"reviewSummary\": [\"Update the partsPrice to 175\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/revieworapproveorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"revieworapproveorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/createorupdateorder Copy 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "role",
+						"value": "REVIEWER",
+						"type": "text"
+					},
+					{
+						"key": "username",
+						"value": "userR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"recordId\": \"1\",\r\n  \"action\": \"reject\",\r\n  \"reviewSummary\": [\"Update the partsPrice to 175\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/createorupdateorder Copy 3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "role",
+						"value": "REVIEWER",
+						"type": "text"
+					},
+					{
+						"key": "username",
+						"value": "userR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"recordId\": \"1\",\r\n  \"action\": \"reject\",\r\n  \"reviewSummary\": [\"Update the partsPrice to 175\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
